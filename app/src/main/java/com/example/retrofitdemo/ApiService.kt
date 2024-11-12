@@ -10,12 +10,12 @@ interface ApiService {
     @GET("products")
     suspend fun getProducts(): ProductResponse
 
-    @POST("products/add")
-    suspend fun createProduct(@Body product: Product): Product
+    // TODO 1: Add here an api endpoint for a POST request to add a product
+    // code here
 
     @PUT("products/{id}")
     suspend fun updateProduct(@Path("id") productId: Int, @Body updatedProduct: Product): Product
 
-    @DELETE("products/{id}")
-    suspend fun deleteProduct(@Path("id") productId: Int): Product
+    // TODO 2: Add here an api endpoint for a DELETE request to delete a product
+    // code here
 }

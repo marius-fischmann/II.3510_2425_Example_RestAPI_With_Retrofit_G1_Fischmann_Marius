@@ -21,10 +21,11 @@ class ProductViewModel : ViewModel() {
         }
     }
 
-    fun addProduct(product: Product) {
+    // TODO 5: Implement the function to add a product.
+    fun addProduct(newProduct: Product) {
         viewModelScope.launch {
-            val newProduct = repository.createProduct(product)
-            products.value = products.value + newProduct
+        // 1. Call the repository function to add the product (students must create this in ProductRepository).
+        // 2. Once added, update the 'products' state with the new list.
         }
     }
 
@@ -37,10 +38,11 @@ class ProductViewModel : ViewModel() {
         }
     }
 
+    // TODO 6: Implement the function to delete a product by ID.
     fun removeProduct(productId: Int) {
         viewModelScope.launch {
-            repository.deleteProduct(productId)
-            products.value = products.value.filter { it.id != productId }
+        // 1. Call the repository function to delete the product.
+        // 2. Update 'products' to remove the deleted product from the list.
         }
     }
 }
